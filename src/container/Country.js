@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import axios from 'axios';
 import ListOfCountry from "../components/ListOfCountry/ListOfCountry";
 import NameOfCountry from "../components/NameOfCountry/NameOfCountry";
+import {Container, Col, Row} from "reactstrap";
 
 class Country extends Component {
 
@@ -48,35 +49,38 @@ class Country extends Component {
         })
     };
 
-
-
     render() {
         return (
-            <div>
-                <div className="CountryBuild">
-                    <section className="ListCountry">
-                        {this.state.countries.map((country, id) => (
-                            <ListOfCountry
-                                key={id}
-                                title={country.name}
-                                clicked={() => this.countrySelectedHandler(country.name)}
-                            />
-                        ))}
-                    </section>
-                    <section className="CountryWrap">
-                        {this.state.countryByName.map((country, id) => (
-                            <NameOfCountry
-                                key={id}
-                                title={country.name}
-                                flag={country.flag}
-                                capital={country.capital}
-                                population={country.population}
-                                borders={this.state.borders}
-                            />
-                        ))}
-                    </section>
-                </div>
-            </div>
+            <Container>
+                <Row>
+                    <Col xs="6">
+                        <section className="ListCountry">
+                            {this.state.countries.map((country, id) => (
+                                <ListOfCountry
+                                    key={id}
+                                    title={country.name}
+                                    clicked={() => this.countrySelectedHandler(country.name)}
+                                />
+                            ))}
+                        </section>
+                    </Col>
+                    <Col xs="6">
+                        <section className="CountryWrap">
+                            {this.state.countryByName.map((country, id) => (
+                                <NameOfCountry
+                                    key={id}
+                                    title={country.name}
+                                    flag={country.flag}
+                                    capital={country.capital}
+                                    population={country.population}
+                                    borders={this.state.borders}
+                                />
+                            ))}
+                        </section>
+                    </Col>
+                </Row>
+
+            </Container>
         );
     }
 }

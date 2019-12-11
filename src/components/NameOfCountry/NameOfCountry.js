@@ -1,16 +1,19 @@
 import React, {Component} from 'react';
+import { Card, CardBody, Button, CardTitle, CardText, CardImg } from 'reactstrap';
+
 class NameOfCountry extends Component {
 
     render() {
         return (
-            <div className="Country">
-                <h3>{this.props.title}</h3>
-                <img alt="" src={this.props.flag} />
-                <span><strong>Capital: </strong>{this.props.capital}</span>
-                <span><strong>Population: </strong>{this.props.population}</span>
-                <span><strong>Borders: </strong>{this.props.borders}</span>
-            </div>
-        );
+                <Card>
+                    <CardImg top width="100%" src={this.props.flag} alt="Card image cap" />
+                    <CardBody>
+                        <CardTitle>{this.props.title}</CardTitle>
+                        <CardText>Population: {this.props.population}</CardText>
+                        <CardText>Borders: {this.props.borders}</CardText>
+                    </CardBody>
+                </Card>
+        )
     }
 }
 
