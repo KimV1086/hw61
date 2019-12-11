@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import axios from 'axios';
+import ListOfCountry from "../components/ListOfCountry/ListOfCountry";
+import NameOfCountry from "../components/NameOfCountry/NameOfCountry";
 
 class Country extends Component {
 
