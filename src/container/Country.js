@@ -51,32 +51,28 @@ class Country extends Component {
 
     render() {
         return (
-            <Container>
+            <Container className="app">
                 <Row>
-                    <Col xs="6">
-                        <section className="ListCountry">
-                            {this.state.countries.map((country, id) => (
-                                <ListOfCountry
-                                    key={id}
-                                    title={country.name}
-                                    clicked={() => this.countrySelectedHandler(country.name)}
-                                />
-                            ))}
-                        </section>
+                    <Col xs="6" className="box left-box">
+                        {this.state.countries.map((country, id) => (
+                            <ListOfCountry
+                                key={id}
+                                title={country.name}
+                                clicked={() => this.countrySelectedHandler(country.name)}
+                            />
+                        ))}
                     </Col>
-                    <Col xs="6">
-                        <section className="CountryWrap">
-                            {this.state.countryByName.map((country, id) => (
-                                <NameOfCountry
-                                    key={id}
-                                    title={country.name}
-                                    flag={country.flag}
-                                    capital={country.capital}
-                                    population={country.population}
-                                    borders={this.state.borders}
-                                />
-                            ))}
-                        </section>
+                    <Col xs="6" className="box right-box">
+                        {this.state.countryByName.map((country, id) => (
+                            <NameOfCountry
+                                key={id}
+                                title={country.name}
+                                flag={country.flag}
+                                capital={country.capital}
+                                population={country.population}
+                                borders={this.state.borders}
+                            />
+                        ))}
                     </Col>
                 </Row>
 

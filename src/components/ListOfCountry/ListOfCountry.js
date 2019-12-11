@@ -1,12 +1,13 @@
 import React, {Component} from 'react';
+import { ListGroup, ListGroupItem } from 'reactstrap';
 
 class ListOfCountry extends Component {
 
     render() {
         return (
-            <div className="ListOfCountry" onClick={this.props.clicked}>
-                <h3>{this.props.title}</h3>
-            </div>
+            <ListGroup flush className="list">
+                <ListGroupItem  onClick={this.props.clicked} tag="a" href="#"><h3>{this.props.title}</h3></ListGroupItem>
+            </ListGroup>
         );
     }
 }
