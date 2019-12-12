@@ -19,7 +19,6 @@ code {
 }
 .box {
   height: 700px;
-  flex-basis: 300px;
   overflow-x: auto;
   padding: 30px;
 }
