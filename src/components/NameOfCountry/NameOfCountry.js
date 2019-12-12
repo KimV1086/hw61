@@ -6,7 +6,7 @@ class NameOfCountry extends Component {
     render() {
         return (
             <Card>
-                <CardImg top width="100%" src={this.props.flag} alt="Card image cap"/>
+                <CardImg top width="100%" src={this.props.flag} alt="country flag"/>
                 <CardBody>
                     <CardTitle>{this.props.title}</CardTitle>
                     <CardText>Capital: {this.props.capital}</CardText>

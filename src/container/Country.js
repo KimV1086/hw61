@@ -38,7 +38,7 @@ class Country extends Component {
                         borders: "No borders"
                     })
                 } else if (namesCountry.length > 0) {
-                    this.setState({
+                    this.setState({/*flex-basis: 300px;*/
                         borders: namesCountry.join(', ')
                     })
                 }
